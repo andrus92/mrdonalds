@@ -1,0 +1,7 @@
+.item {
+    width: 400px;
+    height: 155px;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid blueviolet;
+}
