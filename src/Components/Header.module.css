@@ -1,0 +1,39 @@
+.header {
+    background-color: #299B01;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__logo_img {
+    width: 50px;
+    height: 50px;
+}
+
+.header__logo_txt {
+
+}
+
+.header__btn {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.header__btn_img {
+    width: 32px;
+    height: 32px;
+}
+.header__btn_txt {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+}
