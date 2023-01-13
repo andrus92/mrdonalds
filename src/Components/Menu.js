@@ -1,5 +1,4 @@
 import React from "react";
-import css from './Menu.module.css';
 import { MenuList } from "./MenuList";
 
 import dbMenu from "./DBMenu";
@@ -7,7 +6,7 @@ import dbMenu from "./DBMenu";
 
 export const Menu = () => {
     return (
-        <section className={css.menu}>
+        <section className="menu">
             <section>
                 <h2>Burgers</h2>
                 <MenuList list={dbMenu.burger}/>
