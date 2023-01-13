@@ -8,11 +8,11 @@ export const Menu = () => {
     return (
         <section className="menu">
             <section>
-                <h2>Burgers</h2>
+                <h2 className="menu__title">Burgers</h2>
                 <MenuList list={dbMenu.burger}/>
             </section>
             <section>
-                <h2>Snacks and beverages</h2>
+                <h2 className="menu__title">Snacks and beverages</h2>
                 <MenuList list={dbMenu.other}/>
             </section>
 

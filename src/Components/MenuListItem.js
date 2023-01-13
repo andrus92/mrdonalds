@@ -9,8 +9,8 @@ export const MenuListItem = (props) => {
     
     return (
         <li className="menu__list-item" style={inlineStyle}>
-             <span>{props.item.name}</span>
-            <span>{props.item.price}</span> 
+            <span className="menu__list-item-txt">{props.item.name}</span>
+            <span className="menu__list-item-txt">{props.item.price} zł</span> 
         </li>
         
     )
