@@ -15,7 +15,7 @@ export const Order = (props) => {
                 <OrderList order={props.order} removeOrderItem={props.removeOrderItem}/>
             </div>
             <div>
-                <OrderTotal />
+                <OrderTotal order={props.order}/>
                 <button className="order__btn btn">Order</button>
             </div>
         </section>
