@@ -7,7 +7,11 @@ export const Order = (props) => {
         <section className="order">
             <div>
                 <h2 className="order__title">Your order</h2>
-                <span className="order__nothing">Your have chosen nothing</span>
+                {!props.order.length ?
+                    <span className="order__nothing">Your have chosen nothing</span>
+                :
+                    null
+                }   
                 <OrderList order={props.order}/>
             </div>
             <div>

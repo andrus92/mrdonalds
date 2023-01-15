@@ -11,13 +11,7 @@ export const OrderList = (props) => {
                 <OrderItem key={`OrderItem_` + item.item.id} orderItem={item}/>
             ))
             }
-        </ul>
-        // <ul className="order__list">
-        //     <OrderItem orderItem={props.orderItem}/>
-        //     <OrderItem />
-        //     <OrderItem />
-        // </ul>
-        
+        </ul>        
     )
 }
 

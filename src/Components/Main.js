@@ -19,7 +19,19 @@ export const Main = () => {
     }
 
     const addToOrder =  (item, number) => {
-        setOrder(prevOrder => [...prevOrder, {item: item, number: number}]);
+        const filterRes = order.filter(elem => elem.item.name === item.name);
+        if (filterRes.length === 0) {
+            setOrder([...order, {item: item, number: number}]);
+        } else {
+            const newArray = order.map((elem) => {
+                if (elem.item.name === item.name) {
+                    elem.number += number;
+                }
+                return elem;
+            })
+
+            setOrder(newArray);
+        }
         setModalItem(null);
     }
 
