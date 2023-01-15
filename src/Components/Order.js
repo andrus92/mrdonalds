@@ -12,7 +12,7 @@ export const Order = () => {
             </div>
             <div>
                 <OrderTotal />
-                <button className="order__btn">Order</button>
+                <button className="order__btn btn">Order</button>
             </div>
         </section>
         
