@@ -7,7 +7,7 @@ export const MenuList = (props) => {
     return (
         <ul className="menu__list">
             {props.list.map(item => (
-                <MenuListItem key={item.id} item={item} />
+                <MenuListItem key={item.id} item={item} showModal={props.showModal} />
             ))}
             
         </ul>
