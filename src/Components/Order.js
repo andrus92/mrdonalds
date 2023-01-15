@@ -2,13 +2,13 @@ import React from "react";
 import { OrderList } from "./OrderList";
 import { OrderTotal } from "./OrderTotal";
 
-export const Order = () => {
+export const Order = (props) => {
     return (
         <section className="order">
             <div>
                 <h2 className="order__title">Your order</h2>
                 <span className="order__nothing">Your have chosen nothing</span>
-                <OrderList />
+                <OrderList order={props.order}/>
             </div>
             <div>
                 <OrderTotal />

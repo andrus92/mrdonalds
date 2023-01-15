@@ -1,6 +1,5 @@
 import React from "react";
 import { MenuList } from "./MenuList";
-import { useState } from "react";
 
 import dbMenu from "./DBMenu";
 

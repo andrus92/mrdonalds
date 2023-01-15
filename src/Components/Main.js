@@ -27,7 +27,7 @@ export const Main = () => {
         <main className="main">
             <div className="container">
                 <div className="main__wrap">
-                    <Order />
+                    <Order order={order}/>
                     <Menu showModal={showModal}/>
                     <Modal item={modalItem} closeModal={closeModal} addToOrder={addToOrder} />
                 </div>
