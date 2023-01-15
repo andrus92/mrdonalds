@@ -8,7 +8,6 @@ export const MenuListItem = (props) => {
     }
 
     const showModal = () => {
-        console.log(props.item);
         props.showModal(props.item);
     }
     

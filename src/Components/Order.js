@@ -12,7 +12,7 @@ export const Order = (props) => {
                 :
                     null
                 }   
-                <OrderList order={props.order}/>
+                <OrderList order={props.order} removeOrderItem={props.removeOrderItem}/>
             </div>
             <div>
                 <OrderTotal />

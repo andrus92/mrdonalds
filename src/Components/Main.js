@@ -8,7 +8,6 @@ import { Modal } from "./Modal";
 export const Main = () => {
     const [modalItem, setModalItem] = useState(null);
     const [order, setOrder] = useState([]);
-    console.log(order);
 
     const showModal = (item) => {
         setModalItem(item);
@@ -35,11 +34,16 @@ export const Main = () => {
         setModalItem(null);
     }
 
+    const removeOrderItem = (id) => {
+        const newArray = order.filter(elem => elem.item.id !== id);
+        setOrder(newArray);
+    }
+
     return (
         <main className="main">
             <div className="container">
                 <div className="main__wrap">
-                    <Order order={order}/>
+                    <Order order={order} removeOrderItem={removeOrderItem} />
                     <Menu showModal={showModal}/>
                     <Modal item={modalItem} closeModal={closeModal} addToOrder={addToOrder} />
                 </div>
