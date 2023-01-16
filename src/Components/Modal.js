@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Toppings } from "./Toppings";
 
 export const Modal = (props) => {
     const MIN = 1;
@@ -61,6 +62,13 @@ export const Modal = (props) => {
                                 <button onClick={incrementNumber}>+</button>
                             </div>
                         </div>
+
+                        {props.item.toppings ?
+                            <Toppings toppings={props.item.toppings}/>
+                        :
+                            null
+                        }
+                        
                         <button className="btn" onClick={handleAddClick}>Add</button>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ export const OrderTotal = (props) => {
 
     return (
         <div className="order__total">
-            <span>Total sum</span>
+            <span>Total price</span>
             <span>{totalNum}</span>
             <span>{totalSum} zł</span>
         </div>
