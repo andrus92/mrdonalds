@@ -2,13 +2,18 @@ import React from "react";
 
 export const ToppingItem = (props) => {
 
+
+    const handleInputChange = (event) => {
+        if (event.target.checked === true) {
+            props.addTopping(props.topping);
+        } else {
+            props.removeTopping(props.topping);
+        }
+    }
+
     return (
-        // <li className="topping__item">
-        //     <input type="checkbox" className="topping__checkbox" id={props.topping} ></input>
-        //     <label htmlFor={props.topping}>{props.topping}</label>
-        // </li>
         <label className="checkbox">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={handleInputChange}/>
             <span>{props.topping}</span>
         </label>
     )

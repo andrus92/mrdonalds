@@ -8,6 +8,9 @@ export const Modal = (props) => {
     const MAX = 20;
 
     const [number, setNumber] = useState(MIN);
+    const [selectedToppings, setSelectedToppings] = useState([]);
+
+    console.log('selectedToppings', selectedToppings);
 
     useEffect(() => {
         setNumber(1);
@@ -31,8 +34,17 @@ export const Modal = (props) => {
         }
     }
 
+    const addTopping = (topping) => {
+        setSelectedToppings([...selectedToppings, topping]);
+    }
+
+    const removeTopping = (topping) => {
+        setSelectedToppings(selectedToppings.filter(item => item !== topping));
+    }
+
     const handleAddClick = () => {
-        props.addToOrder(props.item, number);
+        console.log('handleAddClick')
+        props.addToOrder(props.item, number, selectedToppings);
     }
 
     return (
@@ -64,7 +76,11 @@ export const Modal = (props) => {
                         </div>
 
                         {props.item.toppings ?
-                            <Toppings toppings={props.item.toppings}/>
+                            <Toppings 
+                                toppings={props.item.toppings}
+                                addTopping={addTopping}
+                                removeTopping={removeTopping}
+                            />
                         :
                             null
                         }
