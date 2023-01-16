@@ -19,7 +19,5 @@ export const Toppings = (props) => {
                 })}
             </ul>
         </>
-        
-        
     )
 }

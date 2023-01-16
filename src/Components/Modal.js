@@ -14,6 +14,7 @@ export const Modal = (props) => {
 
     useEffect(() => {
         setNumber(1);
+        setSelectedToppings([]);
     }, [props.item]);
 
     const closeModal = (event) => {

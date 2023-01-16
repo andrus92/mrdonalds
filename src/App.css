@@ -213,10 +213,9 @@ button {
 }
 
 .order__list {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
     overflow-y: auto;
     max-height: 300px;
 }
@@ -227,6 +226,7 @@ button {
     align-items: center;
     font-size: 20px;
     line-height: 1.15;
+    border: 1px solid #299B01;
 }
 
 .order__list-name, 
@@ -315,6 +315,16 @@ button {
 .toppings {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.toppings_order {
+    row-gap: 5px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
 
 .topping__item {
