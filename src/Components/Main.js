@@ -17,10 +17,10 @@ export const Main = () => {
         setModalItem(null);
     }
 
-    const addToOrder =  (item, number, selectedToppings) => {
+    const addToOrder =  (item, number, selectedToppings, finalPrice) => {
         const filterRes = order.filter(elem => elem.item.name === item.name);
         if (filterRes.length === 0) {
-            setOrder([...order, {item: item, number: number, selectedToppings: selectedToppings}]);
+            setOrder([...order, {item: item, number: number, selectedToppings: selectedToppings, finalPrice: finalPrice}]);
         } else {
             const newArray = order.map((elem) => {
                 if (elem.item.name === item.name) {
@@ -45,7 +45,13 @@ export const Main = () => {
                 <div className="main__wrap">
                     <Order order={order} removeOrderItem={removeOrderItem} />
                     <Menu showModal={showModal}/>
-                    <Modal item={modalItem} closeModal={closeModal} addToOrder={addToOrder} />
+                    {
+                        modalItem ?
+                        <Modal item={modalItem} closeModal={closeModal} addToOrder={addToOrder} />
+                        :
+                        null
+                    }
+                    
                 </div>
             </div>
         </main>

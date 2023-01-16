@@ -9,13 +9,16 @@ export const Modal = (props) => {
 
     const [number, setNumber] = useState(MIN);
     const [selectedToppings, setSelectedToppings] = useState([]);
-
-    console.log('selectedToppings', selectedToppings);
+    const [finalPrice, setFinalPrice] = useState(props.item.price);
 
     useEffect(() => {
         setNumber(1);
         setSelectedToppings([]);
     }, [props.item]);
+
+    useEffect(() => {
+        setFinalPrice((selectedToppings.length * 0.1 * props.item.price + props.item.price) * number);
+    }, [number, selectedToppings, props.item.price]);
 
     const closeModal = (event) => {
         if (event.target.className === 'modal') {
@@ -44,13 +47,10 @@ export const Modal = (props) => {
     }
 
     const handleAddClick = () => {
-        console.log('handleAddClick')
-        props.addToOrder(props.item, number, selectedToppings);
+        props.addToOrder(props.item, number, selectedToppings, finalPrice);
     }
 
     return (
-        <>
-            {props.item ?
                 <div className="modal" onClick={closeModal}>
                     <div className="modal__block">
                         <div className="modal__banner">
@@ -58,7 +58,7 @@ export const Modal = (props) => {
                         </div>
                         <div className="modal__title">
                             <h3>{props.item.name}</h3>
-                            <h3>{props.item.price} zł</h3>
+                            <span>{props.item.price} zł</span>
                         </div>         
                         <div className="modal__number">
                             <h3>Quantity</h3>
@@ -85,13 +85,14 @@ export const Modal = (props) => {
                         :
                             null
                         }
+
+                        <div className="modal__final-price">
+                            <h3>Final price</h3>
+                            <span>{finalPrice} zł</span>
+                        </div>  
                         
                         <button className="btn" onClick={handleAddClick}>Add</button>
                     </div>
                 </div>
-                :
-                null
-            }
-        </>
     )
 }

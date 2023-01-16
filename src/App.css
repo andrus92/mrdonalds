@@ -286,9 +286,11 @@ button {
 }
 
 .modal__title,
-.modal__number {
+.modal__number,
+.modal__final-price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .modal__number-btn {

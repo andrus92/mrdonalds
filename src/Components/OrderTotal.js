@@ -8,7 +8,7 @@ export const OrderTotal = (props) => {
     );
 
     const totalSum = props.order.reduce(
-        (acc, curVal) => acc + curVal.number * curVal.item.price,
+        (acc, curVal) => acc + curVal.finalPrice,
         0,
     );
       

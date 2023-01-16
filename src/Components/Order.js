@@ -3,7 +3,6 @@ import { OrderList } from "./OrderList";
 import { OrderTotal } from "./OrderTotal";
 
 export const Order = (props) => {
-    console.log('order', props)
     return (
         <section className="order">
             <div>
