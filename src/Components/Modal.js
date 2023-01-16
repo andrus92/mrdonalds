@@ -48,9 +48,9 @@ export const Modal = (props) => {
                             <h3>{props.item.price} zł</h3>
                         </div>         
                         <div className="modal__number">
-                            <span>Quantity</span>
+                            <h3>Quantity</h3>
                             <div>
-                                <button onClick={decrementNumber}>-</button>
+                                <button className="modal__number-btn" onClick={decrementNumber}>-</button>
                                 <input 
                                     className="modal__input" 
                                     type="number" 
@@ -59,7 +59,7 @@ export const Modal = (props) => {
                                     max={MAX}
                                     disabled="disabled" 
                                 />
-                                <button onClick={incrementNumber}>+</button>
+                                <button className="modal__number-btn" onClick={incrementNumber}>+</button>
                             </div>
                         </div>
 

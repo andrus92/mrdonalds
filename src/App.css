@@ -291,9 +291,25 @@ button {
     justify-content: space-between;
 }
 
+.modal__number-btn {
+    background-color: #C4C4C4;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.modal__number-btn:hover {
+    background-color: #299B01;
+    color: #fff;
+}
+
+.modal__number-btn:focus {
+    border: 1px solid #299B01;
+}
+
 .modal__input {
     width: 30px;
     text-align: center;
+    border: none;
 }
 
 .toppings {
