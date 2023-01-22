@@ -1,8 +1,10 @@
 import React from "react";
 
+// import itemImg from "../image/item.svg";
+
 export const OrderToppingItem = (props) => (
-    <label className="checkbox">
-        <input type="checkbox" checked disabled/>
-        <span>{props.topping}</span>
-    </label>
+    <div>
+        <span className="order__topping-item">{props.topping}</span>
+    </div>
+    
 )

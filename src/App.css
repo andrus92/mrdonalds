@@ -222,7 +222,7 @@ button {
 
 .order__list-item {
     display: grid;
-    grid-template-columns: 60fr 10fr 22fr 8fr;
+    grid-template-columns: 44fr 10fr 16fr 8fr 8fr;
     align-items: center;
     font-size: 20px;
     line-height: 1.15;
@@ -236,8 +236,13 @@ button {
 }
 
 .order__list-btn {
-    border: none;
+    border: 1px solid transparent;
     background-color: transparent;
+}
+
+.order__list-btn:hover,
+.order__list-btn:focus {
+    border-color: #299B01;
 }
 
 .order__list-btn img {
@@ -247,10 +252,27 @@ button {
 
 .order__total {
     display: grid;
-    grid-template-columns: 60fr 30fr 17fr;
+    grid-template-columns: 44fr 30fr 17fr;
     margin-bottom: 40px;
     font-size: 20px;
     line-height: 1.15;
+}
+
+.order__topping-item {
+    position: relative;
+}
+
+.order__topping-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 4px;
+    height: 16px;
+    width: 16px;
+    border-bottom: 8px solid #299B01;
+    border-right: 8px solid #299B01;
+    transform: rotate(-45deg);
+
 }
 
 .btn {
@@ -320,8 +342,9 @@ button {
 }
 
 .toppings_order {
+    padding: 0 20px;
     row-gap: 5px;
-    column-gap: 10px;
+    column-gap: 30px;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
 

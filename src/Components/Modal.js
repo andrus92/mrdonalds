@@ -17,7 +17,8 @@ export const Modal = (props) => {
     }, [props.item]);
 
     useEffect(() => {
-        setFinalPrice((selectedToppings.length * 0.1 * props.item.price + props.item.price) * number);
+        const fPrice = Math.round((selectedToppings.length * 0.1 * props.item.price + props.item.price) * number * 100) / 100;
+        setFinalPrice(fPrice);
     }, [number, selectedToppings, props.item.price]);
 
     const closeModal = (event) => {
