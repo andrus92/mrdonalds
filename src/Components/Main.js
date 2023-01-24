@@ -17,20 +17,10 @@ export const Main = () => {
         setModalItem(null);
     }
 
-    const addToOrder =  (item, number, selectedToppings, finalPrice) => {
-        const filterRes = order.filter(elem => elem.item.name === item.name);
-        if (filterRes.length === 0) {
-            setOrder([...order, {item: item, number: number, selectedToppings: selectedToppings, finalPrice: finalPrice}]);
-        } else {
-            const newArray = order.map((elem) => {
-                if (elem.item.name === item.name) {
-                    elem.number += number;
-                }
-                return elem;
-            })
+    const addToOrder =  (item, number, selectedToppings, finalPrice, timestamp) => {
 
-            setOrder(newArray);
-        }
+        setOrder([...order, {item: item, number: number, selectedToppings: selectedToppings, finalPrice: finalPrice, timestamp: timestamp}]);
+
         setModalItem(null);
     }
 

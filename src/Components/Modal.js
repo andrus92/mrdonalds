@@ -48,7 +48,8 @@ export const Modal = (props) => {
     }
 
     const handleAddClick = () => {
-        props.addToOrder(props.item, number, selectedToppings, finalPrice);
+        const timestamp = Math.floor(Date.now() / 1000);
+        props.addToOrder(props.item, number, selectedToppings, finalPrice, timestamp);
     }
 
     return (

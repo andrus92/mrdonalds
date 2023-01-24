@@ -1,3 +1,5 @@
+# This test uses jsonserver. Run the command 'json-server -p 4000 src/DB/db.json'
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -269,8 +269,8 @@ button {
     top: 4px;
     height: 16px;
     width: 16px;
-    border-bottom: 8px solid #299B01;
-    border-right: 8px solid #299B01;
+    border-bottom: 6px solid #299B01;
+    border-right: 6px solid #299B01;
     transform: rotate(-45deg);
 
 }
