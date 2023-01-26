@@ -5,7 +5,7 @@ import { Order } from "./Order";
 import { Menu } from "./Menu";
 import { Modal } from "./Modal";
 
-export const Main = () => {
+export const Main = (props) => {
     const [modalItem, setModalItem] = useState(null);
     const [order, setOrder] = useState([]);
 
@@ -33,7 +33,12 @@ export const Main = () => {
         <main className="main">
             <div className="container">
                 <div className="main__wrap">
-                    <Order order={order} removeOrderItem={removeOrderItem} />
+                    {props.showOrder ?
+                        <Order order={order} removeOrderItem={removeOrderItem} />
+                    :
+                        null
+                    }
+                    
                     <Menu showModal={showModal}/>
                     {
                         modalItem ?
