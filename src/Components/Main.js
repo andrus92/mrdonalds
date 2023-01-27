@@ -29,12 +29,16 @@ export const Main = (props) => {
         setOrder(newArray);
     }
 
+    const clearOrder = () => {
+        setOrder([]);
+    }
+
     return (
         <main className="main">
             <div className="container">
                 <div className="main__wrap">
                     {props.showOrder ?
-                        <Order order={order} removeOrderItem={removeOrderItem} />
+                        <Order order={order} removeOrderItem={removeOrderItem} clearOrder={clearOrder} />
                     :
                         null
                     }

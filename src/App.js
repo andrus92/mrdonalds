@@ -5,7 +5,7 @@ import { Main } from './Components/Main';
 import { useState } from 'react';
 
 function App() {
-  const [showOrder, setShowOrder] = useState(false);
+  const [showOrder, setShowOrder] = useState(true);
 
   const displayOder = (yesno) => {
     setShowOrder(yesno);
